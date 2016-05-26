@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <title>每周外文翻译（二） | 好大夫前端团队iOS技术博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Stretching, Redrawing and Positioning with contentModeThe contentMode property of UIView allows you to control how to layout a view when the view’s bounds change. The system will not, by default, redr">
+<meta property="og:type" content="article">
+<meta property="og:title" content="每周外文翻译（二）">
+<meta property="og:url" content="http://yoursite.com/2016/04/10/每周外文翻译（二）/index.html">
+<meta property="og:site_name" content="好大夫前端团队iOS技术博客">
+<meta property="og:description" content="Stretching, Redrawing and Positioning with contentModeThe contentMode property of UIView allows you to control how to layout a view when the view’s bounds change. The system will not, by default, redr">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-1.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-2.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-3.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-4.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-5.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-6.png">
+<meta property="og:updated_time" content="2016-05-25T07:02:45.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="每周外文翻译（二）">
+<meta name="twitter:description" content="Stretching, Redrawing and Positioning with contentModeThe contentMode property of UIView allows you to control how to layout a view when the view’s bounds change. The system will not, by default, redr">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="好大夫前端团队iOS技术博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="null" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">前端iOS团队</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">在上不骄，高而不危；制节谨度，满而不溢。</p>
+		
+
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>Menu</li>
+						<li>Tags</li>
+						
+						<li>Links</li>
+						
+						
+						<li>A propos</li>
+						
+					</ul>
+				</div>
+			</div>
+		
+
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">所有文章</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="#" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="#" title="rss">rss</a>
+					        
+								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/外文翻译/" style="font-size: 10px;">外文翻译</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
+			        
+			        </div>
+				</section>
+				
+
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">前端iOS团队</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+			
+				<img lazy-src="null" class="js-avatar">
+			
+			</div>
+			<hgroup>
+			  <h1 class="header-author">前端iOS团队</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">在上不骄，高而不危；制节谨度，满而不溢。</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">所有文章</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="#" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="#" title="rss">rss</a>
+			        
+						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap"><article id="post-每周外文翻译（二）" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/10/每周外文翻译（二）/" class="article-date">
+  	<time datetime="2016-04-10T04:58:54.000Z" itemprop="datePublished">2016-04-10</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      每周外文翻译（二）
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/外文翻译/">外文翻译</a></li></ul>
+	</div>
+
+        
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="Stretching-Redrawing-and-Positioning-with-contentMode"><a href="#Stretching-Redrawing-and-Positioning-with-contentMode" class="headerlink" title="Stretching, Redrawing and Positioning with contentMode"></a>Stretching, Redrawing and Positioning with contentMode</h1><p>The <strong>contentMode</strong> property of UIView allows you to control how to layout a view when the view’s bounds change. The system will not, by default, redraw a view each time the bounds change. That would be wasteful. Instead, depending on the content mode, it can scale, stretch or pin the contents to a fixed position.<br>If you have trouble remembering what the different content modes do and which you should use this post should help. Not sure how <strong>ScaleAspectFit</strong> differs from <strong>ScaleAspectFill</strong>? When might you want to use <strong>clipToBounds</strong> or switch to <strong>Redraw</strong> mode? Hopefully this post will tell you all you need to know.<br><a id="more"></a></p>
+<h2 id="Scaling-Redrawing-and-Positioning"><a href="#Scaling-Redrawing-and-Positioning" class="headerlink" title="Scaling, Redrawing and Positioning"></a>Scaling, Redrawing and Positioning</h2><p>There are thirteen different content modes but it is easiest to think of three main groups based on the effect:</p>
+<ul>
+<li><p>Scaling the View (with or without maintaining the aspect ratio)</p>
+</li>
+<li><p>Redrawing the View</p>
+</li>
+<li><p>Positioning the View</p>
+<h2 id="Scaling-the-View"><a href="#Scaling-the-View" class="headerlink" title="Scaling the View"></a>Scaling the View</h2><p>There are three modes that have the effect of scaling or stretching the view contents to fill the available space when the bounds changes:</p>
+</li>
+</ul>
+<p><em>(I will list the Swift enum value first followed by the Objective-C value)</em></p>
+<ul>
+<li><p><strong>ScaleToFill</strong> (UIViewContentModeScaleToFill)</p>
+</li>
+<li><p><strong>ScaleAspectFit</strong> (UIViewContentModeScaleAspectFit)</p>
+</li>
+<li><p><strong>ScaleAspectFill</strong> (UIViewContentModeScaleAspectFill)</p>
+</li>
+</ul>
+<p>The main difference between these modes is whether and how we maintain the aspect ratio of the contents when scaling. Take the example where we have a UIImageView of a star that we add as a subview of a container view shown in green below:<br><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-1.png" alt=""></p>
+<p>The star image view is 100x100 and the larger container view is 200x350. To experiment with the contentMode we can add constraints to make the star image view fill the container view. The difference content modes then control how we make the image view fill the available space.</p>
+<p>The default if you do not set a content mode is <strong>ScaleToFill</strong> shown below left.<strong>ScaleToFill stretches the view to fill the available space without maintaining the aspect ratio.</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">starImageView.contentMode = .ScaleToFill</span><br></pre></td></tr></table></figure>
+<p>Compare this mode with <strong>ScaleAspectFit</strong> shown below right. <strong>ScaleAspectFit</strong>scales the content to fit the view but maintains the aspect ratio. Any part of the view bounds that is not filled with content is transparent which allows us to see the green super view in this example.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">starImageView.contentMode = .ScaleAspectFit</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-2.png" alt=""></p>
+<p>The final scaling mode is <strong>ScaleAspectFill</strong> shown below. <strong>ScaleAspectFill scales the content to totally fill the view maintaining the aspect ratio.</strong> This can result in the content being larger than the bounds of the view.</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">starImageView.contentMode = .ScaleAspectFill</span><br></pre></td></tr></table></figure>
+<p>You can see this below left where the square image view is scaled to 350x350 to fill the 200x350 bounds. <strong>If you do not want to see the contents that are outside the bounds you need to remember to set clipsToBounds to true on the containing superview.</strong> You can see that below right:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">greenView.clipsToBounds = true</span><br></pre></td></tr></table></figure>
+<p><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-3.png" alt=""></p>
+<h2 id="Positioning-the-View"><a href="#Positioning-the-View" class="headerlink" title="Positioning the View"></a>Positioning the View</h2><p>If you do not want to scale or stretch the view with the bounds you can pin it to one of nine possible positions.</p>
+<ul>
+<li><strong>Center</strong> (UIViewContentModeCenter)</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-4.png" alt=""></p>
+<ul>
+<li><p><strong>Top </strong>(UIViewContentModeTop)</p>
+</li>
+<li><p><strong>Bottom </strong>(UIViewContentModeBottom)</p>
+</li>
+<li><p><strong>Left</strong> (UIViewContentModeLeft)</p>
+</li>
+<li><p><strong>Right</strong> (UIViewContentModeRight)</p>
+</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-5.png" alt=""></p>
+<ul>
+<li><p><strong>TopLeft </strong>(UIViewContentModeTopLeft)</p>
+</li>
+<li><p><strong>TopRight </strong>(UIViewContentModeTopRight)</p>
+</li>
+<li><p><strong>BottomLeft</strong> (UIViewContentModeBottomLeft)</p>
+</li>
+<li><p><strong>BottomRight</strong> (UIViewContentModeBottomRight)<br><img src="https://raw.githubusercontent.com/HDFFront-endTeam/blog/master/source/image/2-6.png" alt=""></p>
+</li>
+</ul>
+<p><strong>Note that the contents of the view are not scaled or stretched in any way.</strong></p>
+<h2 id="Redrawing-the-View"><a href="#Redrawing-the-View" class="headerlink" title="Redrawing the View"></a>Redrawing the View</h2><p>Finally, I started by saying that the system does not by default redraw a view when the bounds change. But what if that is what we want?</p>
+<ul>
+<li><strong>Redraw</strong> (UIViewContentModeRedraw)<br>Perhaps we have a custom view that implements drawRect and we need it called any time the bounds change? <strong>The Redraw content mode triggers the setNeedsDisplay method when the view bounds change.</strong></li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">starImageView.contentMode = .Redraw</span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2016/05/26/每周外文翻译（三）/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          每周外文翻译（三）
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share_jia">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">Share to: &nbsp; </span>
+		<a class="jiathis_button_facebook"></a> 
+    <a class="jiathis_button_twitter"></a>
+    <a class="jiathis_button_plus"></a> 
+    <a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+    <a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+
+
+
+<div class="duoshuo">
+	<!-- 多说评论框 start -->
+	<div class="ds-thread" data-thread-key="每周外文翻译（二）" data-title="每周外文翻译（二）" data-url="http://yoursite.com/2016/04/10/每周外文翻译（二）/"></div>
+	<!-- 多说评论框 end -->
+	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+	<script type="text/javascript">
+	var duoshuoQuery = {short_name:"true"};
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
+	<!-- 多说公共JS代码 end -->
+</div>
+
+
+
+
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 前端iOS团队
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+
+
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+
+
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
+  </div>
+</body>
+</html>
